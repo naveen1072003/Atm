@@ -1,0 +1,91 @@
+package com.place;
+
+
+import java.util.Scanner;
+
+class AccDetails{
+   // Scanner sc=new Scanner(System.in);
+   public  String Bname;
+    public String name;
+    public long Accno;
+    public int pin;
+    public  double Balan;
+
+    public AccDetails(String bname, String name, long accno, int pin, double balan) {
+        Bname = bname;
+        this.name = name;
+        Accno = accno;
+        this.pin = pin;
+        Balan = balan;
+    }
+
+    public String getBname() {
+        return Bname;
+    }
+
+    public void setBname(String bname) {
+        Bname = bname;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public long getAccno() {
+        return Accno;
+    }
+
+    public void setAccno(long accno) {
+        Accno = accno;
+    }
+
+    public int getPin() {
+        return pin;
+    }
+
+    public void setPin(int pin) {
+        this.pin = pin;
+    }
+
+    public double getBalan() {
+        return Balan;
+    }
+
+    public void setBalan(double balan) {
+        Balan = balan;
+    }
+
+    public void Dis(){
+
+        System.out.println("*Bank Name:"+Bname+" *Name:"+name+" *Account No:"+Accno+" *Pin No:"+pin+" *Balance:"+Balan);
+    }
+}
+
+public class Atm {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+
+        int size=sc.nextInt();
+         sc.nextLine();
+        AccDetails[] ac =new AccDetails[size];
+        final String Bname="State Bank Of India";
+        for(int i =0; i <size; i++) {
+            String name=sc.nextLine();
+            long Accno=sc.nextLong();
+            int pin= sc.nextInt();
+            double Balance= sc.nextDouble();
+            sc.nextLine();
+            ac[i]=new AccDetails(Bname,name,Accno,pin,Balance);
+          //  ac[i].Dis();
+        }
+        long uac=sc.nextLong();
+        for(int i=0;i<size;i++){
+        }
+
+      
+    }
+}
